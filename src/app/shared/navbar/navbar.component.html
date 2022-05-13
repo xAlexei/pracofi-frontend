@@ -1,8 +1,9 @@
 <nav id="navbar-main" class="navbar navbar-main navbar-expand-lg navbar-transparent navbar-light headroom headroom--top headroom--pinned">
   <div class="container">
-    <a  class="navbar-brand mr-lg-5" [routerLink]="['/home']">
-      <img  width="100px"  src=".\assets\img\brand\Praco.png">
+   <a  [routerLink]="['/home']"> 
+      <img  width="100px" height="100px" src=".\assets\img\brand\IMGSF.png">
     </a>
+    
     <button class="navbar-toggler" type="button" (click)="isCollapsed = !isCollapsed"
           [attr.aria-expanded]="!isCollapsed" aria-controls="navbar_global">
       <span class="navbar-toggler-icon"></span>
@@ -11,9 +12,7 @@
       <div class="navbar-collapse-header">
         <div class="row">
           <div class="col-6 collapse-brand">
-            <a [routerLink]="['/home']">
-              <img src="./assets/img/brand/blue.png">
-            </a>
+           
           </div>
           <div class="col-6 collapse-close">
             <button type="button" class="navbar-toggler" (click)="isCollapsed = !isCollapsed"
@@ -26,10 +25,7 @@
       </div>
       <ul class="navbar-nav align-items-lg-center ml-lg-auto">
       </ul>
-      <li class="navbar-nav navbar-nav-hover align-items-lg-center">
-       <button [routerLink]="['/login']" class="butl">Login</button>
-
-      </li>
+     
       <ul class="navbar-nav navbar-nav-hover align-items-lg-center">
         <li class="nav-item dropdown">
           <a class="nav-link no-caret" data-toggle="dropdown" role="button">
@@ -37,11 +33,18 @@
             <span class="nav-link-inner--text">Menú</span>
           </a>
           <div class="dropdown-menu">
-            <a [routerLink]="['/landing']" class="dropdown-item">Landing</a>
-            <a [routerLink]="['/user-profile']" class="dropdown-item">Profile</a>
+            <a [routerLink]="['/landing']" class="dropdown-item">Inicio</a>
+            <a [routerLink]="['/user-profile']" class="dropdown-item">Equipo de trabajo</a>
+           <!--registro poner en el apartado del rol admin
             <a [routerLink]="['/register']" class="dropdown-item">Register</a>
+            --> 
           </div>
+          
         </li>
+        <li class="navbar-nav navbar-nav-hover align-items-lg-center">
+          <button [routerLink]="['/login']"  class="btn btn-1 btn-primary">Login</button>
+   
+         </li>
       </ul>
     </div>
   </div>
