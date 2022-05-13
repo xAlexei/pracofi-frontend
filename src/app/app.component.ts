@@ -3,7 +3,6 @@ import { Router, NavigationEnd } from '@angular/router';
 import { DOCUMENT } from '@angular/common';
 import { LocationStrategy, PlatformLocation, Location } from '@angular/common';
 import { filter, Subscription } from 'rxjs';
-import { LoginService } from './_services/login.service';
 
 var didScroll;
 var lastScrollTop = 0;
@@ -18,9 +17,7 @@ var navbarHeight = 0;
 export class AppComponent implements OnInit {
     private _router: Subscription;
 
-    
-
-    constructor( private loginSerice: LoginService, private renderer : Renderer2, private router: Router, @Inject(DOCUMENT,) private document: any, private element : ElementRef, public location: Location) {}
+    constructor( private renderer : Renderer2, private router: Router, @Inject(DOCUMENT,) private document: any, private element : ElementRef, public location: Location) {}
     @HostListener('window:scroll', ['$event'])
     hasScrolled() {
 
