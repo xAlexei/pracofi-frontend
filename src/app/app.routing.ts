@@ -15,10 +15,10 @@ const routes: Routes =[
     { path: 'landing',          component: LandingComponent },
     { path: 'home',             component: HomeComponent },
     { path: 'user-profile',     component: ProfileComponent },
-    { path: 'register',           component: SignupComponent },
-    { path: 'login',          component: LoginComponent },
-    { path: 'about',          component: AboutUsComponent},
-    { path: 'contact',        component: ContactComponent },
+    { path: 'register',         component: SignupComponent },
+    { path: 'login',            component: LoginComponent },
+    { path: 'about',            component: AboutUsComponent},
+    { path: 'contact',          component: ContactComponent },
     { path: '', redirectTo: 'landing', pathMatch: 'full' }
 ];
 
