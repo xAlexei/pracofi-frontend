@@ -12,6 +12,8 @@ import { AboutUsComponent } from './about-us/about-us.component';
 import { ServiciosComponent } from './servicios/servicios.component';
 import { ContactComponent } from './contact/contact.component';
 import { NewsComponent } from './news/news.component';
+import { AdminViewComponent } from './admin-view/admin-view.component';
+import { NavbarAdminComponent } from './navbar-admin/navbar-admin.component';
 
 const routes: Routes =[
     { path: 'landing',          component: LandingComponent },
@@ -23,6 +25,7 @@ const routes: Routes =[
     { path: 'contact',          component: ContactComponent },
     { path: 'servicios',        component: ServiciosComponent},
     { path: 'news',             component: NewsComponent },
+    { path: 'adminview',        component: AdminViewComponent},
     { path: '', redirectTo: 'landing', pathMatch: 'full' }
 ];
 

@@ -23,6 +23,8 @@ import { AboutUsComponent } from './about-us/about-us.component';
 import { ContactComponent } from './contact/contact.component';
 import { ServiciosComponent } from './servicios/servicios.component';
 import { NewsComponent } from './news/news.component';
+import { AdminViewComponent } from './admin-view/admin-view.component';
+import { NavbarAdminComponent } from './navbar-admin/navbar-admin.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +38,9 @@ import { NewsComponent } from './news/news.component';
     AboutUsComponent,
     ContactComponent,
     ServiciosComponent,
-    NewsComponent
+    NewsComponent,
+    AdminViewComponent,
+    NavbarAdminComponent
   ],
   imports: [
     BrowserModule,
