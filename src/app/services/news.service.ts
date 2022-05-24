@@ -1,5 +1,4 @@
 import { Injectable } from '@angular/core';
-import { Observable } from "rxjs"
 import { Router } from '@angular/router';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 
@@ -24,10 +23,6 @@ export class NewsService {
 
   getNews(news){
     return this.http.get<any>(this.getUrl);
-  }
-
-  updateNews(news){
-
   }
 
   deleteNews(news){

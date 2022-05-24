@@ -4,6 +4,9 @@ import { FormsModule } from '@angular/forms';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { RouterModule } from '@angular/router';
 import { AppRoutingModule } from './app.routing';
+import { ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+
 
 
 import { AppComponent } from './app.component';
@@ -18,6 +21,8 @@ import { HomeModule } from './home/home.module';
 import { LoginComponent } from './login/login.component';
 import { AboutUsComponent } from './about-us/about-us.component';
 import { ContactComponent } from './contact/contact.component';
+import { ServiciosComponent } from './servicios/servicios.component';
+import { NewsComponent } from './news/news.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +34,9 @@ import { ContactComponent } from './contact/contact.component';
     FooterComponent,
     LoginComponent,
     AboutUsComponent,
-    ContactComponent
+    ContactComponent,
+    ServiciosComponent,
+    NewsComponent
   ],
   imports: [
     BrowserModule,
@@ -37,7 +44,10 @@ import { ContactComponent } from './contact/contact.component';
     FormsModule,
     RouterModule,
     AppRoutingModule,
-    HomeModule
+    HomeModule,
+    ReactiveFormsModule,
+    HttpClientModule
+    
   ],
   providers: [],
   bootstrap: [AppComponent]

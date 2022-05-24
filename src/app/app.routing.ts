@@ -9,7 +9,9 @@ import { SignupComponent } from './signup/signup.component';
 import { LandingComponent } from './landing/landing.component';
 import { LoginComponent } from './login/login.component';
 import { AboutUsComponent } from './about-us/about-us.component';
+import { ServiciosComponent } from './servicios/servicios.component';
 import { ContactComponent } from './contact/contact.component';
+import { NewsComponent } from './news/news.component';
 
 const routes: Routes =[
     { path: 'landing',          component: LandingComponent },
@@ -19,6 +21,8 @@ const routes: Routes =[
     { path: 'login',            component: LoginComponent },
     { path: 'about',            component: AboutUsComponent},
     { path: 'contact',          component: ContactComponent },
+    { path: 'servicios',        component: ServiciosComponent},
+    { path: 'news',             component: NewsComponent },
     { path: '', redirectTo: 'landing', pathMatch: 'full' }
 ];
 
