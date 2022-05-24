@@ -33,16 +33,17 @@
             <span class="nav-link-inner--text">Inicio</span>
           </a>  
         </li>
-        <li class="nav-item">
-          <a [routerLink]="['/servicios']" class="nav-link no-caret" data-toggle="dropdown" role="button">
-            <i class="ni ni-collection d-lg-none"></i>
-            <span class="nav-link-inner--text">Servicios</span>
-          </a>  
-        </li>
+       
         <li class="nav-item">
           <a [routerLink]="['/about']" class="nav-link no-caret" data-toggle="dropdown" role="button">
             <i class="ni ni-collection d-lg-none"></i>
             <span class="nav-link-inner--text"> ¿Quiénes somos?</span>
+          </a>  
+        </li>
+        <li class="nav-item">
+          <a [routerLink]="['/servicios']" class="nav-link no-caret" data-toggle="dropdown" role="button">
+            <i class="ni ni-collection d-lg-none"></i>
+            <span class="nav-link-inner--text">Servicios</span>
           </a>  
         </li>
         <!--
@@ -56,17 +57,18 @@
           </div>
         </li>-->
         <li class="nav-item">
-          <a [routerLink]="['/contact']" class="nav-link no-caret" data-toggle="dropdown" role="button">
-            <i class="ni ni-collection d-lg-none"></i>
-            <span class="nav-link-inner--text"> Contacto</span>
-          </a>  
-        </li>
-        <li class="nav-item">
           <a class="nav-link no-caret" data-toggle="dropdown" role="button">
             <i class="ni ni-collection d-lg-none"></i>
             <span class="nav-link-inner--text"> Noticias</span>
           </a>  
         </li>
+        <li class="nav-item">
+          <a [routerLink]="['/contact']" class="nav-link no-caret" data-toggle="dropdown" role="button">
+            <i class="ni ni-collection d-lg-none"></i>
+            <span class="nav-link-inner--text"> Contacto</span>
+          </a>  
+        </li>
+        
         <li class="navbar-nav navbar-nav-hover align-items-lg-center">
           <button class="btn btn-primary" (click)="open(classic1, 'modal_mini', 'sm')">
             Inicio de sesión
