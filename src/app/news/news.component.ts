@@ -3,6 +3,13 @@ import { FormBuilder } from '@angular/forms';
 import { NewsService } from '../services/news.service';
 import Swal from 'sweetalert2';
 
+export interface News {
+  titulo: String,
+  content: String,
+  image: String
+}
+
+
 @Component({
   selector: 'app-news',
   templateUrl: './news.component.html',

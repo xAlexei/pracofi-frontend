@@ -13,7 +13,7 @@ import { ServiciosComponent } from './servicios/servicios.component';
 import { ContactComponent } from './contact/contact.component';
 import { NewsComponent } from './news/news.component';
 import { AdminViewComponent } from './admin-view/admin-view.component';
-import { NavbarAdminComponent } from './navbar-admin/navbar-admin.component';
+import { UsersComponent } from './users/users.component';
 
 const routes: Routes =[
     { path: 'landing',          component: LandingComponent },
@@ -26,6 +26,7 @@ const routes: Routes =[
     { path: 'servicios',        component: ServiciosComponent},
     { path: 'news',             component: NewsComponent },
     { path: 'adminview',        component: AdminViewComponent},
+    { path: 'users',            component: UsersComponent},
     { path: '', redirectTo: 'landing', pathMatch: 'full' }
 ];
 
