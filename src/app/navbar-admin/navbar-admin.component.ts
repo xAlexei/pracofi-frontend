@@ -7,6 +7,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavbarAdminComponent implements OnInit {
 
+  public isCollapsed = true;
+  private lastPoppedUrl: string;
+  private yScrollStack: number[] = [];
+
   constructor() { }
 
   ngOnInit(): void {
