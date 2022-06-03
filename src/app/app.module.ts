@@ -26,6 +26,7 @@ import { AdminViewComponent } from './admin-view/admin-view.component';
 import { NavbarAdminComponent } from './navbar-admin/navbar-admin.component';
 import { UsersComponent } from './users/users.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,
