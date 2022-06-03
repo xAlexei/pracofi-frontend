@@ -25,9 +25,10 @@ export class UsersComponent implements OnInit {
 
   user: object;
   userForm;
+  formUser: any;
   
   cambios=[];
-  displayedColumns: string[] = ['name', 'surname', 'email', 'role'];
+  displayedColumns: string[] = ['name', 'surname', 'email', 'role', 'actions'];
   dataSource: MatTableDataSource<User>
 
   @ViewChild(MatPaginator, {static: true}) paginator: MatPaginator;
@@ -40,6 +41,7 @@ export class UsersComponent implements OnInit {
   active2 = 1;
   
   constructor(private userService: UsuariosService, private formBuilder: FormBuilder) { 
+    // Obtener todos los usuarios y listarlos
     this.userService.getUsers().subscribe(data =>{
       console.log(data);
       this.dataSource = new MatTableDataSource(data);
@@ -53,11 +55,17 @@ export class UsersComponent implements OnInit {
       email: '',
       password: '',
   });
+
+  
   }
 
   ngOnInit(): void {
-    
+    this.formUser = this.formBuilder.group({
+      _id: ''
+    })
   }
+
+  //Registrar los usuarios
 
   onSubmit(f){
     if(f){
@@ -65,11 +73,14 @@ export class UsersComponent implements OnInit {
       this.userService.addUser(f).subscribe((data: any[])=>{
         console.log(data);
         this.user = data;
+
         Swal.fire(
           'Good job!',
           'Registro exitoso!',
           'success'
-        )
+        ).then(function(){
+          location.reload();
+        })
       })
     }else{
       Swal.fire({
@@ -87,7 +98,21 @@ export class UsersComponent implements OnInit {
       this.dataSource.paginator.firstPage();
     }
   }
-  
  
+  //Eliminar usuarios
+
+  deleteUser(id: string){
+    this.userService.delete(id).subscribe(data =>{
+      console.log(data);
+      Swal.fire(
+        'Good job!',
+        'Eliminado!',
+        'success'
+      ).then(function(){
+        location.reload();
+      })
+    })
+  }
+
 
 }

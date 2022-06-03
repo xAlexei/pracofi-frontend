@@ -3,7 +3,8 @@ import { Router, NavigationEnd, NavigationStart } from '@angular/router';
 import { Location, PopStateEvent } from '@angular/common';
 import { NgbModal, ModalDismissReasons } from '@ng-bootstrap/ng-bootstrap';
 import { NgbDate, NgbCalendar } from '@ng-bootstrap/ng-bootstrap';
-
+import { MatDialog } from '@angular/material/dialog';
+import { LoginComponent } from 'src/app/login/login.component';
 @Component({
     selector: 'app-navbar',
     templateUrl: './navbar.component.html',
@@ -18,6 +19,8 @@ export class NavbarComponent implements OnInit {
   model2 : NgbDate;
   model : NgbDate;
 
+  dialogRef;
+
   focus;
   focus1;
   focus2;
@@ -29,7 +32,7 @@ export class NavbarComponent implements OnInit {
     private lastPoppedUrl: string;
     private yScrollStack: number[] = [];
 
-    constructor(private modalService: NgbModal, calendar: NgbCalendar, public location: Location, private router: Router) {
+    constructor( private modalService: NgbModal, calendar: NgbCalendar, public location: Location, private router: Router) {
     }
     
     open(content, type, modalDimension) {
@@ -123,4 +126,7 @@ export class NavbarComponent implements OnInit {
             return false;
         }
     }
+
+
+
 }
