@@ -26,6 +26,7 @@ import { AdminViewComponent } from './admin-view/admin-view.component';
 import { NavbarAdminComponent } from './navbar-admin/navbar-admin.component';
 import { UsersComponent } from './users/users.component';
 import { UpdateUserComponent } from './update-user/update-user.component';
+import { GetNewsComponent } from './get-news/get-news.component';
 
 
 @NgModule({
@@ -44,7 +45,8 @@ import { UpdateUserComponent } from './update-user/update-user.component';
     AdminViewComponent,
     NavbarAdminComponent,
     UsersComponent,
-    UpdateUserComponent
+    UpdateUserComponent,
+    GetNewsComponent
   ],
   imports: [
     BrowserModule,

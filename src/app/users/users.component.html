@@ -111,7 +111,7 @@
                                             <button class="btn btn-danger" (click)="deleteUser(row._id);">
                                               Borrar
                                             </button>
-                                            <button class="btn btn-primary" (click)="openUpdateUser()">
+                                            <button class="btn btn-primary" [routerLink]="['/update']">
                                               Editar
                                             </button>
                                         </td>
