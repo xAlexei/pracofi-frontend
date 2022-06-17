@@ -4,7 +4,9 @@ import { ViewChild } from '@angular/core';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
+import {MatDialog} from '@angular/material/dialog';
 import { FormBuilder } from '@angular/forms';
+import { UpdateUserComponent } from '../update-user/update-user.component';
 import Swal from 'sweetalert2';
 
 export interface User{
@@ -26,7 +28,8 @@ export class UsersComponent implements OnInit {
   user: object;
   userForm;
   formUser: any;
-  
+  dialogRef;
+
   cambios=[];
   displayedColumns: string[] = ['name', 'surname', 'email', 'role', 'actions'];
   dataSource: MatTableDataSource<User>
@@ -114,5 +117,14 @@ export class UsersComponent implements OnInit {
     })
   }
 
+  //Actualizar usuarios
+
+  
+
 
 }
+
+  
+
+
+
