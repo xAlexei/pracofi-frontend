@@ -25,6 +25,7 @@ import { NewsComponent } from './news/news.component';
 import { AdminViewComponent } from './admin-view/admin-view.component';
 import { NavbarAdminComponent } from './navbar-admin/navbar-admin.component';
 import { UsersComponent } from './users/users.component';
+import { UpdateUserComponent } from './update-user/update-user.component';
 
 
 @NgModule({
@@ -42,7 +43,8 @@ import { UsersComponent } from './users/users.component';
     NewsComponent,
     AdminViewComponent,
     NavbarAdminComponent,
-    UsersComponent
+    UsersComponent,
+    UpdateUserComponent
   ],
   imports: [
     BrowserModule,
@@ -57,6 +59,10 @@ import { UsersComponent } from './users/users.component';
     MatIconModule,
     
   ],
+  entryComponents: [
+    UpdateUserComponent
+  ],
+
   providers: [],
   bootstrap: [AppComponent]
 })
