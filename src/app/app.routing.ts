@@ -14,6 +14,7 @@ import { ContactComponent } from './contact/contact.component';
 import { NewsComponent } from './news/news.component';
 import { AdminViewComponent } from './admin-view/admin-view.component';
 import { UsersComponent } from './users/users.component';
+import { UpdateUserComponent } from './update-user/update-user.component';
 
 const routes: Routes =[
     { path: 'landing',          component: LandingComponent },
@@ -27,6 +28,7 @@ const routes: Routes =[
     { path: 'news',             component: NewsComponent },
     { path: 'adminview',        component: AdminViewComponent},
     { path: 'users',            component: UsersComponent},
+    { path: 'update',           component: UpdateUserComponent},
     { path: '', redirectTo: 'landing', pathMatch: 'full' }
 ];
 
