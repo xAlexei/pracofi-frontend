@@ -27,6 +27,7 @@ import { NavbarAdminComponent } from './navbar-admin/navbar-admin.component';
 import { UsersComponent } from './users/users.component';
 import { UpdateUserComponent } from './update-user/update-user.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,
