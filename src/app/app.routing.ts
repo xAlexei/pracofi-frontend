@@ -16,6 +16,7 @@ import { AdminViewComponent } from './admin-view/admin-view.component';
 import { UsersComponent } from './users/users.component';
 import { UpdateUserComponent } from './update-user/update-user.component';
 import { GetNewsComponent } from './get-news/get-news.component';
+
 const routes: Routes =[
     { path: 'landing',          component: LandingComponent },
     { path: 'home',             component: HomeComponent },
