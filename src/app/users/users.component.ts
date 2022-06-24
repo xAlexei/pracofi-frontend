@@ -57,15 +57,11 @@ export class UsersComponent implements OnInit {
       surname: '',
       email: '',
       password: '',
-  });
-
-  
+    });
   }
 
-  ngOnInit(): void {
-    this.formUser = this.formBuilder.group({
-      _id: ''
-    })
+  ngOnInit(){
+    
   }
 
   //Registrar los usuarios

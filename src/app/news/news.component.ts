@@ -5,6 +5,7 @@ import Swal from 'sweetalert2';
 
 export interface News {
   titulo: String,
+  subtittle: String,
   content: String,
   image: String
 }
@@ -25,6 +26,7 @@ export class NewsComponent implements OnInit {
   ) { 
     this.newsForm = this.formBuilder.group({
         titulo: '',
+        subtittle: '',
         content: '',
         image: ''
     });
@@ -41,7 +43,10 @@ export class NewsComponent implements OnInit {
         this.news = data;
         Swal.fire(
           '¡Guardado!',
-        )
+          'success'
+        ).then(function(){
+          location.reload();
+        })
       })
     }else{
       Swal.fire({

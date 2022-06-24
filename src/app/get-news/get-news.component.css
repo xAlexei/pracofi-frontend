@@ -1,0 +1,27 @@
+.contenedor {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+    .example-card {
+    min-width: 200px;
+    max-width: 500px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    
+    }
+
+    img{
+        min-width: 400px;
+        max-width: 400px;
+        min-height: 200px;
+        max-height: 200px;
+    }
+    mat-card-subtitle {
+    font-size: 30px;
+    }
+    
+    mat-card-title {
+    
+    }
+

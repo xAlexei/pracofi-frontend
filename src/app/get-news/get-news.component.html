@@ -1,1 +1,47 @@
 <app-navbar></app-navbar>
+<main>
+    <div class="position-relative">
+      <!-- shape Hero -->
+      <section class="section section-lg section-shaped pb-20">
+        <div class="shape shape-style-1 shape-default">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div class="container pt-lg pb-30" style="margin-bottom: 5%;">
+          <div class="row text-center justify-content-center">
+           
+          </div>
+        </div>
+
+      </section>
+      <!-- 1st Hero Variation -->
+    </div>
+    <section class="section bg-secondary"  style="margin-top: -150px;">
+    <div class="slider">
+        <div class="contenedor">
+        <mat-card class="example-card" *ngFor="let new of news">            
+            <mat-card-header>
+                <mat-card-title>{{ new.titulo }}</mat-card-title>
+            </mat-card-header>
+            <img mat-card-image src="{{new.image}}">
+            <mat-card-content>
+                <p>{{ new.subtittle}}</p>
+            </mat-card-content>
+            <mat-card-actions>
+               <button class="btn btn-primary">Leer más</button>
+            </mat-card-actions>
+        </mat-card>
+    </div>
+</div>
+      </section>
+    
+  </main>
+
+  <app-footer></app-footer>

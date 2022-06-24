@@ -14,6 +14,7 @@ import { ProfileComponent } from './profile/profile.component';
 import { NavbarComponent } from './shared/navbar/navbar.component';
 import { FooterComponent } from './shared/footer/footer.component';
 import { MatTableModule } from '@angular/material/table';
+import { MatCardModule } from '@angular/material/card';
 
 
 import { HomeModule } from './home/home.module';
@@ -59,6 +60,7 @@ import { GetNewsComponent } from './get-news/get-news.component';
     HttpClientModule,
     MatTableModule,
     MatIconModule,
+    MatCardModule
     
   ],
   entryComponents: [
