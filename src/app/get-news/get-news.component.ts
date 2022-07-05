@@ -1,14 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { NewsService } from '../services/news.service';
-import {MatCardModule} from '@angular/material/card';
-
-export interface News{
-  titulo: String,
-  subtittle: String,
-  content: String,
-  image: String
-  
-}
+import { ActivatedRoute } from '@angular/router';
+import { TrackHttpError } from '../shared/model/trackHttpError';
+import { Location } from '@angular/common';
+import { Observable } from 'rxjs';
+import { News } from '../news';
+import { take } from 'rxjs/operators';
 
 @Component({
   selector: 'app-get-news',
@@ -17,17 +14,22 @@ export interface News{
 })
 export class GetNewsComponent implements OnInit {
 
+  news$: Observable<News | TrackHttpError>;
   public news: News[] = [];
+  topHeadingDisplay:any = [];
 
-  constructor(private newSerivce: NewsService) {
-
-    this.newSerivce.getNew().subscribe(data =>{
-      console.log(data);
-    });
+  constructor(private newSerivce: NewsService, private route:ActivatedRoute, private location:Location) {
+    this.newSerivce.getNew().subscribe((result)=>{
+      console.log(result);
+      this.topHeadingDisplay = result;      
+    })
   }
 
   ngOnInit(): void {
-      this.newSerivce.getNew().subscribe(
-        news => this.news.push( ...news));
+ 
+    }
+
+    onGoBack():void{
+      this.location.back();
     }
 }

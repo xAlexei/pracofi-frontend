@@ -42,7 +42,8 @@ export class NewsComponent implements OnInit {
         console.log(data);
         this.news = data;
         Swal.fire(
-          '¡Guardado!',
+          'Good job!',
+          'Registro exitoso!',
           'success'
         ).then(function(){
           location.reload();

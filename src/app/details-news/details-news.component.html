@@ -23,16 +23,15 @@
     </div>
     <section class="section bg-secondary"  style="margin-top: -150px;">
   <div class="container-fluid mt-5">
-      <div class="row">
-        <div *ngFor="let new of topHeadingDisplay" class="col-lg-3">
-          <div class="box">
-            <img src="{{new.image}}" width="100%">
-            <h5>{{ new.titulo }}</h5>
-            <!--<p>{{ new.content }}</p>-->
-            <a [routerLink]="['/detailnews/', new._id]" class="btn btn-primary btn-sm mt-2">Leer más</a>
-          </div>
-        </div>
+    <div *ngIf="item">
+      <div class="col-sm-9">
+        <h1 class="display-1 mb-0">{{item.titulo}}</h1>
       </div>
+      <img src="{{item.image}}">
+      <div class="col-sm-9">
+        <p class="lead">{{item.content}}</p>
+      </div>
+    </div>    
   </div>
       </section>    
   </main>

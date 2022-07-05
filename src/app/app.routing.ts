@@ -16,6 +16,7 @@ import { AdminViewComponent } from './admin-view/admin-view.component';
 import { UsersComponent } from './users/users.component';
 import { UpdateUserComponent } from './update-user/update-user.component';
 import { GetNewsComponent } from './get-news/get-news.component';
+import { DetailsNewsComponent } from './details-news/details-news.component';
 
 const routes: Routes =[
     { path: 'landing',          component: LandingComponent },
@@ -31,6 +32,7 @@ const routes: Routes =[
     { path: 'users',            component: UsersComponent},
     { path: 'update',           component: UpdateUserComponent},
     { path: 'getnews',          component: GetNewsComponent},
+    { path: 'detailnews/:id',       component: DetailsNewsComponent},
     { path: '', redirectTo: 'landing', pathMatch: 'full' }
 ];
 
