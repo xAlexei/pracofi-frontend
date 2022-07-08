@@ -4,9 +4,7 @@ import { ViewChild } from '@angular/core';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
-import {MatDialog} from '@angular/material/dialog';
 import { FormBuilder } from '@angular/forms';
-import { UpdateUserComponent } from '../update-user/update-user.component';
 import Swal from 'sweetalert2';
 
 export interface User{
@@ -43,7 +41,9 @@ export class UsersComponent implements OnInit {
   active1 = 1;
   active2 = 1;
   
-  constructor(private userService: UsuariosService, private formBuilder: FormBuilder) { 
+  constructor(
+          private userService: UsuariosService,
+          private formBuilder: FormBuilder) { 
     // Obtener todos los usuarios y listarlos
     this.userService.getUsers().subscribe(data =>{
       console.log(data);

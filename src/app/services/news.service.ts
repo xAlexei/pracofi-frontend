@@ -35,7 +35,7 @@ export class NewsService {
   }
   
   //Eliminar noticias
-  deleteNews(news){
-    return this.http.delete<any>(this.deleteUrl);
+  deleteNews(id: string){
+    return this.http.delete<any>(this.deleteUrl + id);
   }
 }

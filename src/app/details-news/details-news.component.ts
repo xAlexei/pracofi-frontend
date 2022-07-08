@@ -27,6 +27,7 @@ export class DetailsNewsComponent implements OnInit {
   ngOnInit(): void { }
 
  getOne(){
+  //Obtener las noticias por ID
   this.newSerivce.getDetails(this.id).subscribe(data =>{
     this.item = data;
     console.log(data);
