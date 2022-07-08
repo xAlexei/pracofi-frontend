@@ -14,8 +14,6 @@ import { take } from 'rxjs/operators';
 })
 export class GetNewsComponent implements OnInit {
 
-  news$: Observable<News | TrackHttpError>;
-  public news: News[] = [];
   topHeadingDisplay:any = [];
 
   constructor(private newSerivce: NewsService, private route:ActivatedRoute, private location:Location) {

@@ -29,6 +29,8 @@ import { UsersComponent } from './users/users.component';
 import { UpdateUserComponent } from './update-user/update-user.component';
 import { GetNewsComponent } from './get-news/get-news.component';
 import { DetailsNewsComponent } from './details-news/details-news.component';
+import { DetailsJobsComponent } from './details-jobs/details-jobs.component';
+import { VacancyComponent } from './vacancy/vacancy.component';
 
 
 @NgModule({
@@ -49,7 +51,9 @@ import { DetailsNewsComponent } from './details-news/details-news.component';
     UsersComponent,
     UpdateUserComponent,
     GetNewsComponent,
-    DetailsNewsComponent
+    DetailsNewsComponent,
+    DetailsJobsComponent,
+    VacancyComponent
   ],
   imports: [
     BrowserModule,

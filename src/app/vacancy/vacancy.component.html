@@ -1,0 +1,18 @@
+<div class="container">
+    <div class="card" *ngFor="let new of topHeadingDisplay">
+      <div class="card-header">
+        <img src="https://happytravel.viajes/wp-content/uploads/2020/04/146-1468479_my-profile-icon-blank-profile-picture-circle-hd.png" alt="rover" />
+      </div>
+      <div class="card-body">
+        <span class="tag tag-teal"> {{ new.vacancy}}</span>
+        <h4>
+          {{new.description}}
+        </h4>
+        <p>
+          <br>{{new.requirements}}
+          <br>Salario: ${{new.salary}}.00
+          <br>Tiempo: {{new.time}}
+        </p>
+      </div>
+    </div>
+  </div>

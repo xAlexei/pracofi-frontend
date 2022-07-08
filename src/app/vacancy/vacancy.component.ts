@@ -6,27 +6,23 @@ import { Location } from '@angular/common';
 import { Observable } from 'rxjs';
 import { Jobs } from '../jobs';
 
-
 @Component({
-    selector: 'app-landing',
-    templateUrl: './landing.component.html',
-    styleUrls: ['./landing.component.scss']
+  selector: 'app-vacancy',
+  templateUrl: './vacancy.component.html',
+  styleUrls: ['./vacancy.component.css']
 })
-
-export class LandingComponent implements OnInit {
-  focus: any;
-  focus1: any;
+export class VacancyComponent implements OnInit {
 
   topHeadingDisplay: any = [];
 
-  constructor(private jobService: JobsService, private route: ActivatedRoute, private location: Location) { 
-    //Obtener noticias
+  constructor(private jobService: JobsService, private route: ActivatedRoute, private location: Location) {
     this.jobService.getJobs().subscribe((result)=>{
       console.log(result);
       this.topHeadingDisplay = result; 
     })
-  }
+   }
 
-  ngOnInit() {}
+  ngOnInit(): void {
+  }
 
 }
