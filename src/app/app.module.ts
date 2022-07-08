@@ -15,7 +15,6 @@ import { NavbarComponent } from './shared/navbar/navbar.component';
 import { FooterComponent } from './shared/footer/footer.component';
 import { MatTableModule } from '@angular/material/table';
 import { MatCardModule } from '@angular/material/card';
-import { MatPaginatorModule } from '@angular/material/paginator';
 
 
 import { HomeModule } from './home/home.module';
@@ -30,8 +29,6 @@ import { UsersComponent } from './users/users.component';
 import { UpdateUserComponent } from './update-user/update-user.component';
 import { GetNewsComponent } from './get-news/get-news.component';
 import { DetailsNewsComponent } from './details-news/details-news.component';
-import { GetJobsComponent } from './get-jobs/get-jobs.component';
-import { DetailsJobComponent } from './details-job/details-job.component';
 
 
 @NgModule({
@@ -52,9 +49,7 @@ import { DetailsJobComponent } from './details-job/details-job.component';
     UsersComponent,
     UpdateUserComponent,
     GetNewsComponent,
-    DetailsNewsComponent,
-    GetJobsComponent,
-    DetailsJobComponent
+    DetailsNewsComponent
   ],
   imports: [
     BrowserModule,
@@ -67,8 +62,7 @@ import { DetailsJobComponent } from './details-job/details-job.component';
     HttpClientModule,
     MatTableModule,
     MatIconModule,
-    MatCardModule,
-    MatPaginatorModule
+    MatCardModule
     
   ],
   entryComponents: [
