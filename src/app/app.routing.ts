@@ -18,6 +18,7 @@ import { UpdateUserComponent } from './update-user/update-user.component';
 import { GetNewsComponent } from './get-news/get-news.component';
 import { DetailsNewsComponent } from './details-news/details-news.component';
 import { DetailsJobsComponent } from './details-jobs/details-jobs.component';
+import { VacancyComponent } from './vacancy/vacancy.component';
 
 const routes: Routes =[
     { path: 'landing',          component: LandingComponent },
@@ -34,7 +35,8 @@ const routes: Routes =[
     { path: 'update',           component: UpdateUserComponent},
     { path: 'getnews',          component: GetNewsComponent},
     { path: 'detailnews/:id',   component: DetailsNewsComponent},
-    { path: 'detailjobs',   component: DetailsJobsComponent},
+    { path: 'detailjobs',       component: DetailsJobsComponent},
+    { path: 'vacancy',          component: VacancyComponent},
     { path: '', redirectTo: 'landing', pathMatch: 'full' }
 ];
 

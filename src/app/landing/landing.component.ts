@@ -21,10 +21,7 @@ export class LandingComponent implements OnInit {
 
   constructor(private jobService: JobsService, private route: ActivatedRoute, private location: Location) { 
     //Obtener noticias
-    this.jobService.getJobs().subscribe((result)=>{
-      console.log(result);
-      this.topHeadingDisplay = result; 
-    })
+    
   }
 
   ngOnInit() {}

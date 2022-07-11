@@ -2,20 +2,18 @@
 * {
   box-sizing: border-box;
 }
-body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 0;
-  background-color: #f7f8fc;
-  font-family: "Roboto", sans-serif;
-  color: #10182f;
-}
+
 .container {
   display: flex;
-  width: 1040px;
   justify-content: space-evenly;
   flex-wrap: wrap;
+}
+.hr {
+  height: 10px;
+  width: 40%;
+  margin-left:405px;
+  background-color: #7060E9;
+  
 }
 .card {
   margin: 10px;
@@ -50,7 +48,7 @@ body {
   cursor: pointer;
 }
 .tag-teal {
-  background-color: #47bcd4;
+  background-color: #4C33FF;
 }
 .tag-purple {
   background-color: #5e76bf;
