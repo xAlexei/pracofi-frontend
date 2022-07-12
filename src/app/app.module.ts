@@ -15,6 +15,7 @@ import { NavbarComponent } from './shared/navbar/navbar.component';
 import { FooterComponent } from './shared/footer/footer.component';
 import { MatTableModule } from '@angular/material/table';
 import { MatCardModule } from '@angular/material/card';
+import { AuthService } from './services/auth.service';
 
 
 import { HomeModule } from './home/home.module';
@@ -31,7 +32,9 @@ import { GetNewsComponent } from './get-news/get-news.component';
 import { DetailsNewsComponent } from './details-news/details-news.component';
 import { DetailsJobsComponent } from './details-jobs/details-jobs.component';
 import { VacancyComponent } from './vacancy/vacancy.component';
+import { BolsaComponent } from './bolsa/bolsa.component';
 
+import { AuthGuard } from './auth.guard';
 
 @NgModule({
   declarations: [
@@ -53,7 +56,8 @@ import { VacancyComponent } from './vacancy/vacancy.component';
     GetNewsComponent,
     DetailsNewsComponent,
     DetailsJobsComponent,
-    VacancyComponent
+    VacancyComponent,
+    BolsaComponent
   ],
   imports: [
     BrowserModule,
@@ -73,7 +77,7 @@ import { VacancyComponent } from './vacancy/vacancy.component';
     UpdateUserComponent
   ],
 
-  providers: [],
+  providers: [AuthService, AuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

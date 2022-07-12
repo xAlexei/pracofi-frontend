@@ -20,19 +20,21 @@ import { DetailsNewsComponent } from './details-news/details-news.component';
 import { DetailsJobsComponent } from './details-jobs/details-jobs.component';
 import { VacancyComponent } from './vacancy/vacancy.component';
 
+import { AuthGuard } from './auth.guard';
+
 const routes: Routes =[
     { path: 'landing',          component: LandingComponent },
     { path: 'home',             component: HomeComponent },
     { path: 'user-profile',     component: ProfileComponent },
-    { path: 'register',         component: SignupComponent },
+    { path: 'register',         component: SignupComponent, canActivate: [AuthGuard] },
     { path: 'login',            component: LoginComponent },
     { path: 'about',            component: AboutUsComponent},
     { path: 'contact',          component: ContactComponent },
     { path: 'servicios',        component: ServiciosComponent},
-    { path: 'news',             component: NewsComponent },
-    { path: 'adminview',        component: AdminViewComponent},
-    { path: 'users',            component: UsersComponent},
-    { path: 'update',           component: UpdateUserComponent},
+    { path: 'news',             component: NewsComponent, canActivate: [AuthGuard] },
+    { path: 'adminview',        component: AdminViewComponent, canActivate: [AuthGuard]},
+    { path: 'users',            component: UsersComponent, canActivate: [AuthGuard]},
+    { path: 'update',           component: UpdateUserComponent, canActivate: [AuthGuard]},
     { path: 'getnews',          component: GetNewsComponent},
     { path: 'detailnews/:id',   component: DetailsNewsComponent},
     { path: 'detailjobs',       component: DetailsJobsComponent},
@@ -44,9 +46,7 @@ const routes: Routes =[
   imports: [
     CommonModule,
     BrowserModule,
-    RouterModule.forRoot(routes,{
-      useHash: true
-    })
+    RouterModule.forRoot(routes)
   ],
   exports: [
   ],
