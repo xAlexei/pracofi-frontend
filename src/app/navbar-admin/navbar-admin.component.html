@@ -51,7 +51,9 @@
             </a>  
           </li>
           <li>
-            <button type="button" class="btn btn-primary">Cerrar Sesión</button>
+            <ng-container>
+            <button type="button" class="btn btn-primary" (click)="logout()">Cerrar Sesión</button>
+          </ng-container>
           </li>
         </ul>
       </div>

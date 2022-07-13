@@ -5,7 +5,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { RouterModule } from '@angular/router';
 import { AppRoutingModule } from './app.routing';
 import { ReactiveFormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { MatIconModule } from '@angular/material/icon';
 import { AppComponent } from './app.component';
 import { SignupComponent } from './signup/signup.component';
@@ -35,6 +35,8 @@ import { VacancyComponent } from './vacancy/vacancy.component';
 import { BolsaComponent } from './bolsa/bolsa.component';
 
 import { AuthGuard } from './auth.guard';
+import { HttpInterceptor } from '@angular/common/http';
+import { TokenInterceptorService } from './services/token-interceptor.service';
 
 @NgModule({
   declarations: [
@@ -77,7 +79,11 @@ import { AuthGuard } from './auth.guard';
     UpdateUserComponent
   ],
 
-  providers: [AuthService, AuthGuard],
+  providers: [AuthService, AuthGuard, {
+    provide: HTTP_INTERCEPTORS,
+    useClass: TokenInterceptorService,
+    multi: true
+  }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
