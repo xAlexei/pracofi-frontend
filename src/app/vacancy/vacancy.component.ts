@@ -24,5 +24,9 @@ export class VacancyComponent implements OnInit {
 
   ngOnInit(): void {
   }
+  
+  onGoBack():void{
+    this.location.back();
+  }
 
 }

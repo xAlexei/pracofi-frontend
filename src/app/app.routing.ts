@@ -19,6 +19,8 @@ import { GetNewsComponent } from './get-news/get-news.component';
 import { DetailsNewsComponent } from './details-news/details-news.component';
 import { DetailsJobsComponent } from './details-jobs/details-jobs.component';
 import { VacancyComponent } from './vacancy/vacancy.component';
+import { DetailsComponent } from './details/details.component';
+import { BolsaComponent } from './bolsa/bolsa.component';
 
 import { AuthGuard } from './auth.guard';
 
@@ -39,6 +41,8 @@ const routes: Routes =[
     { path: 'detailnews/:id',   component: DetailsNewsComponent},
     { path: 'detailjobs',       component: DetailsJobsComponent},
     { path: 'vacancy',          component: VacancyComponent},
+    { path: 'nuevo/:id',        component: DetailsComponent},
+    { path: 'bolsa', component: BolsaComponent},
     { path: '', redirectTo: 'landing', pathMatch: 'full' }
 ];
 

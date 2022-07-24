@@ -3,6 +3,7 @@ import { Router } from '@angular/router';
 import { catchError, Observable } from 'rxjs';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { News } from '../news';
+import { Jobs } from '../jobs';
 
 @Injectable({
   providedIn: 'root'
@@ -13,7 +14,7 @@ export class JobsService {
 
   private postUrl = 'http://localhost:4201/addjob';
   private getUrl = 'http://localhost:4201/getjob';
-  private detailsUrl = 'http://localhost:4201/detailjob/';
+  private detailUrl = 'http://localhost:4201/detailjob/';
   private deleteUrl = 'http://localhost:4201/deletejob/';
   private updateUrl = 'http://localhost:4201/updatejob/';
 
@@ -34,7 +35,7 @@ export class JobsService {
   //Detalle de vacantes
 
   getDetails(id): Observable<any>{
-    return this.http.get(this.detailsUrl + id)
+    return this.http.get<Jobs>(this.detailUrl + id)
   }
   //Eliminar vacantes
 

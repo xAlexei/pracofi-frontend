@@ -16,8 +16,8 @@
           <br>Salario: ${{new.salary}}.00
           <br>Tiempo: {{new.time}}
         </p>
-        <button class="btn btn-primary"> Postularme </button>
+        <a [routerLink]="['/nuevo/', new._id]" class="btn btn-primary"> Postularme </a>
       </div>
     </div>
-  </div>
+  </div>  
 </div>

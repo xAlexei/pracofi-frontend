@@ -37,6 +37,7 @@ import { BolsaComponent } from './bolsa/bolsa.component';
 import { AuthGuard } from './auth.guard';
 import { HttpInterceptor } from '@angular/common/http';
 import { TokenInterceptorService } from './services/token-interceptor.service';
+import { DetailsComponent } from './details/details.component';
 
 @NgModule({
   declarations: [
@@ -59,7 +60,8 @@ import { TokenInterceptorService } from './services/token-interceptor.service';
     DetailsNewsComponent,
     DetailsJobsComponent,
     VacancyComponent,
-    BolsaComponent
+    BolsaComponent,
+    DetailsComponent
   ],
   imports: [
     BrowserModule,
