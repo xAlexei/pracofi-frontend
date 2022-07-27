@@ -15,6 +15,7 @@ import { NavbarComponent } from './shared/navbar/navbar.component';
 import { FooterComponent } from './shared/footer/footer.component';
 import { MatTableModule } from '@angular/material/table';
 import { MatCardModule } from '@angular/material/card';
+import { MatSelectModule } from '@angular/material/select';
 import { AuthService } from './services/auth.service';
 
 
@@ -74,7 +75,8 @@ import { DetailsComponent } from './details/details.component';
     HttpClientModule,
     MatTableModule,
     MatIconModule,
-    MatCardModule
+    MatCardModule,
+    MatSelectModule
     
   ],
   entryComponents: [

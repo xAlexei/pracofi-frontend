@@ -21,24 +21,21 @@ export class JobsService {
   constructor(private http: HttpClient, private router: Router) { }
 
   //Añadir vacantes
-
   addJob(job){
     return this.http.post(this.postUrl, job);
   }
 
   //Obtener vacantes
-
   getJobs(): Observable<any>{
     return this.http.get(this.getUrl);
   }
 
   //Detalle de vacantes
-
   getDetails(id): Observable<any>{
     return this.http.get<Jobs>(this.detailUrl + id)
   }
+  
   //Eliminar vacantes
-
   deleteJob(id: String){
     return this.http.delete<any>(this.deleteUrl + id);
   }
