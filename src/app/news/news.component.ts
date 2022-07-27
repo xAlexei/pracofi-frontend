@@ -6,7 +6,9 @@ import Swal from 'sweetalert2';
 export interface News {
   titulo: String,
   subtittle: String,
-  content: String,
+  content1: String,
+  content2: String,
+  content3: String,
   image: String
 }
 
@@ -27,7 +29,9 @@ export class NewsComponent implements OnInit {
     this.newsForm = this.formBuilder.group({
         titulo: '',
         subtittle: '',
-        content: '',
+        content1: '',
+        content2: '',
+        content3: '',
         image: ''
     });
   }

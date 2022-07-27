@@ -8,25 +8,17 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class DetailsComponent implements OnInit {
 
-  id: String;
-  item: any;
 
   constructor(
     private jobsService: JobsService,
     private route : ActivatedRoute
   ) { 
-    this.id = this.route.snapshot.params.get('id');
-    this.getOne();
+
   }
 
   ngOnInit(): void {
   }
 
-  getOne(){
-    this.jobsService.getDetails(this.id).subscribe(data=>{
-      this.item = data;
-      console.log(data);
-    })
-  }
+
 
 }
