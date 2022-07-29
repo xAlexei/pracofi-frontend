@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { EmailService } from '../services/email.service';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-contact',
@@ -10,7 +12,10 @@ export class ContactComponent implements OnInit {
   focus: any;
   focus1: any;
 
-  constructor() { }
+  constructor(
+    private emailService: EmailService
+
+  ) { }
 
   ngOnInit(): void {
   }

@@ -25,19 +25,30 @@
     </div>
     <div>
         <section class="section section-lg pt-lg-0 section-contact-us">
-          <div class="container text-center" >
+          <div class="container text-center" *ngIf="item">
             <div class="row justify-content-center mt--300">
               <div class="col-lg-8">
                 <div class="card bg-gradient-secondary shadow">
                   <div class="card-body p-lg-5">
                     <h4 class="mb-1">Por favor, complete con sus datos</h4>
                     <p class="mt-0"></p>
+
+                    <form  (ngSubmit)="contactForm(form.value)" #form="ngForm">
                     <div class="form-group mt-5">
                       <div class="input-group input-group-alternative">
                         <div class="input-group-prepend">
-                          <span class="input-group-text"><i class="ni ni-user-run"></i></span>
+                          <span class="input-group-text"></span>
                         </div>
-                        <input class="form-control" placeholder="Ingresa tu nombre" type="text" >
+                        <input class="form-control" name="nombre" placeholder="Nombre completo" type="text" ngModel>
+                      </div>
+                    </div>
+
+                    <div class="form-group">
+                      <div class="input-group input-group-alternative">
+                        <div class="input-group-prepend">
+                          <span class="input-group-text"><i></i></span>
+                        </div>
+                        <input class="form-control" name="asunto" placeholder="{{item.vacancy}}" type="text" ngModel>
                       </div>
                     </div>
 
@@ -46,25 +57,20 @@
                         <div class="input-group-prepend">
                           <span class="input-group-text"><i class="ni ni-email-83"></i></span>
                         </div>
-                        <input class="form-control" placeholder="Correo Electronico" type="email">
+                        <input class="form-control" name="email" placeholder="Correo Electronico" type="email" ngModel>
                       </div>
                     </div>
 
-                    <div class="form-group mb-4">
-                        <select style="width: 100%;">
-                            <option> Opcion 1</option>
-                            <option> Opcion 2</option>
-                            <option> Opcion 3</option>
-                        </select>
-                    </div>
+              
+              
                     <p>Por favor, adjunta tu CV</p>
                     <div class="form-group mb-4">
-                        <input type="file">
+                        <input type="file" name="mensaje" ngModel>
                     </div>
                     <div>
-                        
-                      <button type="button" class="btn btn-default btn-round btn-block btn-lg">ENVIAR</button>
+                      <button type="submit" class="btn btn-default btn-round btn-block btn-lg">ENVIAR</button>
                     </div>
+                  </form>
                   </div>
                 </div>
               </div>

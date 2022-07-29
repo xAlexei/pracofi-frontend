@@ -41,7 +41,7 @@ const routes: Routes =[
     { path: 'detailnews/:id',   component: DetailsNewsComponent},
     { path: 'detailjobs',       component: DetailsJobsComponent},
     { path: 'vacancy',          component: VacancyComponent},
-    { path: 'nuevo',        component: DetailsComponent},
+    { path: 'nuevo/:id',        component: DetailsComponent},
     { path: 'bolsa', component: BolsaComponent},
     { path: '', redirectTo: 'landing', pathMatch: 'full' }
 ];
