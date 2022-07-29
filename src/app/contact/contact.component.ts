@@ -20,4 +20,17 @@ export class ContactComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  contactForm(form){
+    this.emailService.sendMailContact(form).subscribe((data)=>{
+      console.log(data);
+      Swal.fire(
+        'Enviado!',
+        'Nos pondremos en contacto!',
+        'success'
+      ).then(function(){
+        location.reload();
+      })
+    })
+  }
+
 }

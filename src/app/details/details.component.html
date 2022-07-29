@@ -33,7 +33,7 @@
                     <h4 class="mb-1">Por favor, complete con sus datos</h4>
                     <p class="mt-0"></p>
 
-                    <form  (ngSubmit)="contactForm(form.value)" #form="ngForm">
+                    <form (ngSubmit)="contactForm(form.value)" #form="ngForm">
                     <div class="form-group mt-5">
                       <div class="input-group input-group-alternative">
                         <div class="input-group-prepend">
@@ -60,9 +60,7 @@
                         <input class="form-control" name="email" placeholder="Correo Electronico" type="email" ngModel>
                       </div>
                     </div>
-
-              
-              
+          
                     <p>Por favor, adjunta tu CV</p>
                     <div class="form-group mb-4">
                         <input type="file" name="mensaje" ngModel>

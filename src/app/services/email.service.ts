@@ -12,4 +12,8 @@ export class EmailService {
     return this.http.post('http://localhost:4201/formulario', body);
   }
 
+  sendMailContact(body){
+    return this.http.post('http://localhost:4201/contacto', body);
+  }
+
 }
