@@ -22,7 +22,6 @@ export class ContactComponent implements OnInit {
 
   contactForm(form){
     this.emailService.sendMailContact(form).subscribe((data)=>{
-      console.log(data);
       Swal.fire(
         'Enviado!',
         'Nos pondremos en contacto!',

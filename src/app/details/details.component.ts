@@ -38,7 +38,6 @@ export class DetailsComponent implements OnInit {
 
   contactForm(form){
     this.emaiLService.sendMessage(form).subscribe((data)=>{
-      console.log(data);
       Swal.fire(
         'Enviado!',
         'Nos pondremos en contacto!',
